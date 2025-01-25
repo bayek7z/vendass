@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Johnzynnn Optimization</title>
+  <style>
+    /* Estilo geral */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: #fff;
+    }
+    header {
+      background-color: #000;
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header a {
+      text-decoration: none;
+      color: #fff;
+      margin: 0 15px;
+    }
+    header a:hover {
+      color: #e60000;
+    }
+    .banner {
+      background: url('banner.jpg') no-repeat center;
+      background-size: cover;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .banner h1 {
+      color: #fff;
+      font-size: 3em;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 10px 20px;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .product {
+      text-align: center;
+      border: 1px solid #333;
+      padding: 10px;
+      background-color: #222;
+    }
+    .product img {
+      max-width: 100%;
+    }
+    .product button {
+      background-color: #e60000;
+      color: #fff;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+    .product button:hover {
+      background-color: #fff;
+      color: #e60000;
+    }
+    footer {
+      background-color: #000;
+      text-align: center;
+      padding: 15px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+    footer a {
+      color: #e60000;
+      text-decoration: none;
+    }
+    footer a:hover {
+      color: #fff;
+    }
+    /* Estilo do chat */
+    .chat {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+    }
+    .chat button {
+      background-color: #e60000;
+      color: #fff;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 50%;
+      font-size: 20px;
+      cursor: pointer;
+    }
+    .chat-window {
+      display: none;
+      position: fixed;
+      bottom: 80px;
+      right: 20px;
+      background-color: #222;
+      color: #fff;
+      padding: 15px;
+      border: 1px solid #e60000;
+      border-radius: 10px;
+      width: 300px;
+    }
+    .chat-window textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      resize: none;
+    }
+    .chat-window button {
+      background-color: #e60000;
+      color: #fff;
+      border: none;
+      padding: 10px;
+      margin-top: 10px;
+      width: 100%;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo"><a href="#">Johnzynnn Optimization</a></div>
+    <nav>
+      <a href="#">Início</a>
+      <a href="#">Produtos</a>
+      <a href="#">Sobre Nós</a>
+      <a href="#">Contato</a>
+      <a href="#">Ajuda</a>
+    </nav>
+  </header>
+  
+  <section class="banner">
+    <h1>Bem-vindo à Johnzynnn Optimization!</h1>
+  </section>
+  
+  <section class="products">
+    <div class="product">
+      <img src="produto1.jpg" alt="Produto 1">
+      <h2>Produto 1</h2>
+      <p>R$ 99,99</p>
+      <button>Comprar Agora</button>
+    </div>
+    <div class="product">
+      <img src="produto2.jpg" alt="Produto 2">
+      <h2>Produto 2</h2>
+      <p>R$ 149,99</p>
+      <button>Comprar Agora</button>
+    </div>
+  </section>
+  
+  <footer>
+    <p>© 2025 Johnzynnn Optimization. Todos os direitos reservados. <a href="#">Política de Privacidade</a></p>
+  </footer>
+  
+  <!-- Chat -->
+  <div class="chat">
+    <button onclick="toggleChat()">💬</button>
+    <div class="chat-window" id="chatWindow">
+      <p>Olá! Como podemos ajudar você?</p>
+      <textarea rows="4" placeholder="Digite sua mensagem..."></textarea>
+      <button>Enviar</button>
+    </div>
+  </div>
+
+  <script>
+    function toggleChat() {
+      const chatWindow = document.getElementById("chatWindow");
+      chatWindow.style.display = chatWindow.style.display === "block" ? "none" : "block";
+    }
+  </script>
+</body>
+</html>
